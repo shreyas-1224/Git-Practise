@@ -48,4 +48,6 @@ and that a new branch named "origin/master" has been created in your local repos
 Note that even though the remote repository has a new file, it has not been added to your local repository yet. You would need to use the git merge command to merge the changes from the "origin/master" branch into your local "master" branch in order to have the new file in your local repository.
 
 
+You are doing great! I am proud of you.
+
 

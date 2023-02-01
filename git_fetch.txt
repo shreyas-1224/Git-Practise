@@ -8,6 +8,8 @@ which you can use to inspect the changes, create new branches based on the remot
 In summary, git fetch is a way to retrieve updates from a remote repository without affecting your local repository's current state.
 _______________________________________________________________________________________________________________________________________________
 
+use , git fetch <brach-name>. then to merge, use git merge origin/<branch-name>
+
 for example : 
 
 Here's an example scenario to illustrate the use of git fetch:

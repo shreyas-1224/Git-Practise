@@ -1,0 +1,6 @@
+I created a file on master and added some data in it and then used git diff. what will be the output ?
+
+The output of git diff command will show the difference between the contents of the file in your local repository 
+(i.e., the file you created and added data to) and the latest version of the same file in the master branch. 
+If you have not yet committed your changes to the local repository, the output of git diff will show the differences 
+between your local file and the latest committed version in the master branch.

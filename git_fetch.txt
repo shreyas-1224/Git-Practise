@@ -1,0 +1,30 @@
+what is git fetching
+git fetch is a Git command used to retrieve commits and other references from a remote repository and store them in your local repository. 
+This allows you to see what changes have been made to the remote repository and to merge them with your local repository.
+The git fetch command downloads only the data that is new or changed in the remote repository, 
+and does not modify the contents of your local repository. Instead, the downloaded data is stored in your local repository as "remote branches," 
+which you can use to inspect the changes, create new branches based on the remote data, or merge the changes into your local branches.
+
+In summary, git fetch is a way to retrieve updates from a remote repository without affecting your local repository's current state.
+_______________________________________________________________________________________________________________________________________________
+
+for example : 
+
+Here's an example scenario to illustrate the use of git fetch:
+Let's say you have a remote repository named "origin" and a local repository with a branch named "master." 
+The remote repository has two branches, "master" and "feature." The "feature" branch contains new changes that you would 
+like to merge into your local repository.
+
+To retrieve the changes from the "feature" branch in the remote repository, you would run the following command:
+git fetch origin feature
+
+This will download the latest changes from the "feature" branch in the remote repository and store them in your local repository 
+as a remote branch named "origin/feature."
+You can then inspect the changes using the git log command, and merge them into your local "master" branch with the git merge command:
+
+git log origin/feature
+git merge origin/feature
+
+These commands will show you the changes in the "feature" branch and merge them into your local "master" branch, 
+allowing you to keep your local repository up to date with the remote repository.
+

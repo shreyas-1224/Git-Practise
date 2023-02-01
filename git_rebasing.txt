@@ -1,0 +1,33 @@
+What is git rebasing ?
+
+Let's say you have a main branch named master, and you created a new branch named feature to work on a new feature for your project. 
+While you were working on the feature branch, the master branch was updated with several new commits.
+
+Here's what the commit history of the two branches might look like:
+
+master: A - B - C - D - E
+feature: A - F - G - H
+
+
+In this example, commit A is the same in both branches because it's the starting point of the feature branch. 
+Commits B, C, D, and E were made on the master branch, while commits F, G, and H were made on the feature branch.
+
+If you now want to merge the changes from the feature branch into the master branch, you could use rebasing to simplify the process. 
+To rebase the feature branch onto the master branch, you would run the following command:
+
+$ git checkout feature
+$ git rebase master
+
+What Git does now is to reapply each of the commits from the feature branch, one by one, on top of the latest state of the master branch. 
+So in this case, Git would reapply commits F, G, and H on top of commit E of the master branch. Here's what the new commit history would look like:
+
+master: A - B - C - D - E
+feature: A - B - C - D - E - F' - G' - H'
+
+As you can see, the feature branch now appears as if it was developed directly on top of the master branch,
+and the changes from the feature branch have been incorporated into the master branch.
+
+This example is a simplified scenario and rebasing can get more complex when there are conflicts between the two branches. 
+In such cases, Git will stop the rebasing process and ask you to resolve the conflicts before continuing. 
+It's important to understand the potential consequences of rebasing and to use it with caution, 
+especially when working with shared branches that other people may be using.

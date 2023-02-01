@@ -28,3 +28,24 @@ git merge origin/feature
 These commands will show you the changes in the "feature" branch and merge them into your local "master" branch, 
 allowing you to keep your local repository up to date with the remote repository.
 
+________________________________________________________________________________________________________________________________________________
+
+i added a file to remote master branch and then from local master branch, used git fetch origin master, what will be the output
+If you have added a file to the remote "master" branch and then run git fetch origin master from your local "master" branch, 
+the output of the command would show the changes that were retrieved from the remote repository. The exact output would depend on the current state 
+of your local repository and the remote repository, but it could look something like this:
+
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0)
+Unpacking objects: 100% (3/3), done.
+From https://github.com/user/repo
+ * [new branch]      master     -> origin/master
+
+This output shows that three objects were retrieved from the remote repository, that they have been successfully compressed and decompressed, 
+and that a new branch named "origin/master" has been created in your local repository to store the changes from the remote "master" branch.
+
+Note that even though the remote repository has a new file, it has not been added to your local repository yet. You would need to use the git merge command to merge the changes from the "origin/master" branch into your local "master" branch in order to have the new file in your local repository.
+
+
+
